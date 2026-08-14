@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HBD love</title>	    
+    <link type="text/css" rel="stylesheet" href="default.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jscex.min.js"></script>
+    <script type="text/javascript" src="jscex-parser.js"></script>
+    <script type="text/javascript" src="jscex-jit.js"></script>
+    <script type="text/javascript" src="jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="jscex-async.min.js"></script>
+    <script type="text/javascript" src="jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="love.js" charset="utf-8"></script>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div id="page">
+    <div id="gallery">
+        <div class="photo-frame" data-label="Photo 1" style="--rot:-7deg">
+            <img src="https://raw.githubusercontent.com/Ankit2758/Bharti-Ji/refs/heads/main/bharti1.jpg" alt="Photo 1" onerror="this.remove(); this.parentElement.classList.add('empty')">
+        </div>
+        <div class="photo-frame" data-label="Photo 2" style="--rot:5deg">
+            <img src="https://raw.githubusercontent.com/Ankit2758/Bharti-Ji/refs/heads/main/Bharti2.jpg" alt="Photo 2" onerror="this.remove(); this.parentElement.classList.add('empty')">
+        </div>
+        <div class="photo-frame" data-label="Photo 3" style="--rot:-4deg">
+            <img src="https://raw.githubusercontent.com/Ankit2758/Bharti-Ji/refs/heads/main/b1.jpeg" alt="Photo 3" onerror="this.remove(); this.parentElement.classList.add('empty')">
+        </div>
+        <div class="photo-frame" data-label="Photo 4" style="--rot:8deg">
+            <img src="https://raw.githubusercontent.com/Ankit2758/Bharti-Ji/refs/heads/main/b2.jpeg" alt="Photo 4" onerror="this.remove(); this.parentElement.classList.add('empty')">
+        </div>
+        <div class="photo-frame" data-label="Photo 5" style="--rot:-6deg">
+            <img src="https://raw.githubusercontent.com/Ankit2758/Bharti-Ji/refs/heads/main/b3.jpeg" alt="Photo 5" onerror="this.remove(); this.parentElement.classList.add('empty')">
+        </div>
+        <div class="photo-frame" data-label="Photo 6" style="--rot:3deg">
+            <img src="https://raw.githubusercontent.com/Ankit2758/Bharti-Ji/refs/heads/main/b4.jpeg" alt="Photo 6" onerror="this.remove(); this.parentElement.classList.add('empty')">
+        </div>
+    </div>
+    <div id="main">
+        <div id="error"><a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a> (<a href="http://firefox.com.cn/download/">Firefox</a>)</div>
+        <audio autoplay="autoplay" height="100" width="100" id="myAudio">
+            <source src="aud.mp3" type="audio/mp3" />
+            <embed height="100" width="100" src="aud.mp3" />
+        </audio>
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <span class="say">Happy Birthday to someone who’s been on my mind more than I’d like to admit 😭💞</span><br>
+                    <span class="say">I really hope today feels as special as you are,</span><br>
+                    <span class="say">and that you’re surrounded by everything and everyone that makes you smile.</span><br>
+                    <span class="say">You honestly deserve the absolute best,</span><br>
+                    <span class="say">not just today but always. I’m really glad you exist… enjoy your day, birthday girl 🎂✨</span><br>
+                    <span class="say">So A very happy Birthday to Beloved Bharti ❤️🎀</span><br>
+                    <span class="say">May God bless you with good pepole and keep distance from pepole like me.</span><br>
+                    <span class="say">Once Again Happy Birthday. ❤️</span><br>
+                </div>
+            </div>
+            <div id="clock-box">
+                <span id="clock">577 days 0 hours 0 minutes 0 seconds</span> <!-- Change to "6940 days..." if needed -->
+            </div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+    </div>
+    <div id="finale">
+        <span class="headline">🎂 Happy Birthday, Bharti! 🎂</span>
+    </div>
+
+    <script>
+    (function() {
+        var canvas = $('#canvas');
+		
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
+
+        var width = canvas.width();
+        var height = canvas.height();        
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]] 
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
+
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
+
+        canvas.click(function(e) {
+            playAudio();
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0; 
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
+
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
+
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            $("#code").show().typewriter(startReveal);
+        }));
+	    
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+            textAnimate().start();
+        }));
+
+        runAsync().start();
+    })();
+
+    // Fires once the last line of the message has finished typing.
+    // 1) scales/shifts the scene to the right to make room
+    // 2) reveals the 6 photos one by one, polaroid-style
+    // 3) shows the final "Happy Birthday" message with a confetti burst
+    function startReveal() {
+        setTimeout(function () {
+            var page = document.getElementById('page');
+            page.classList.add('reveal');
+
+            var slideDuration = 1100; // matches the CSS transition below
+            var photos = document.querySelectorAll('#gallery .photo-frame');
+            var photoInterval = 380;
+
+            photos.forEach(function (photo, i) {
+                setTimeout(function () {
+                    photo.classList.add('show');
+                }, slideDuration + i * photoInterval);
+            });
+
+            var finaleDelay = slideDuration + photos.length * photoInterval + 500;
+            setTimeout(function () {
+                spawnConfetti();
+                document.getElementById('finale').classList.add('show');
+            }, finaleDelay);
+        }, 1200); // brief pause after the last message line finishes
+    }
+
+    function spawnConfetti() {
+        var finale = document.getElementById('finale');
+        var emojis = ['❤️', '🎉', '✨', '🎈', '💖', '🌸', '🥳'];
+        var count = 30;
+        for (var i = 0; i < count; i++) {
+            var bit = document.createElement('span');
+            bit.className = 'confetti';
+            bit.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            bit.style.left = Math.random() * 100 + 'vw';
+            bit.style.fontSize = (16 + Math.random() * 18) + 'px';
+            bit.style.animationDuration = (3 + Math.random() * 3) + 's';
+            bit.style.animationDelay = (Math.random() * 2.5) + 's';
+            finale.appendChild(bit);
+        }
+    }
+    </script>
+</body>
+</html>
